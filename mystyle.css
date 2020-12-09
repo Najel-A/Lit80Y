@@ -82,13 +82,14 @@
     }
 
 .bg {
-    background-image: url("Home_Cover2.jpg");
+    background-image: url(Home_Cover2.jpg);
     height: 100%;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #464646;
     }
+   
 body, html {
     height: 100%;
     margin: 0;
@@ -113,5 +114,31 @@ body, html {
     top: 450px;
     color: white;
     }
+    @import 'https://fonts.googleapis.com/css?family=Roboto';
+    html, body {
+        background-color: #000;
+    }
+    h2, a, p {
+        color: #fff;
+        font-family: Roboto;
+        text-decoration: none;
+    }
+    p>a {
+        color: #fd084a;
+    }
+    .blink {
+      animation: blink 0.5s infinite;
+    }
+    @keyframes blink{
+      to { opacity: .0; }
+    }
+    .flex {
+        display: flex;
+    }
+    .header-sub-title {
+      color: #fff;
+      font-family: "Courier";
+      font-size: 20px;
+      padding: 0.1em;
+    }
 
-    
