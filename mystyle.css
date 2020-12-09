@@ -44,6 +44,7 @@
     left: 0;
     right: 0;
     top: 0;
+    height: none;
     width: 100%;
     }
 
@@ -81,7 +82,7 @@
     }
 
 .bg {
-    background-image: url("Home_Cover.jpg");
+    background-image: url("Home_Cover2.jpg");
     height: 100%;
     background-position: center center;
     background-repeat: no-repeat;
@@ -94,7 +95,7 @@ body, html {
     background-attachment: fixed;
     max-width: 100%;
     background-color: #464646;
-    padding-top: 65px;
+    padding-top: 50px;
   }
 
   /*.bg {
