@@ -20,7 +20,7 @@
         
         /* Header/Blog Title */
         .header {
-          padding: 30px;
+          padding: 15px;
           font-size: 40px;
           text-align: center;
           background: white;
@@ -46,6 +46,14 @@
           width: 100%;
           padding: 20px;
         }
+
+        .firstimg {
+          background-color: #aaa;
+          max-width: 100%;
+          max-height: 100%;
+          display: block;
+          padding: 20px;
+        }
         
         /* Add a card effect for articles */
         .card {
@@ -68,6 +76,19 @@
           background: #ddd;
           margin-top: 20px;
         }
+
+        .column {
+            float: left;
+            width: 33.33%;
+            padding: 5px;
+            }
+
+            /* Clearfix (clear floats) */
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
+            }
         
         /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
         @media screen and (max-width: 800px) {
@@ -97,19 +118,22 @@
       </div>
 
       <div class="header">
-        <h2>Blog Name</h2>
+        <h2></h2>
       </div>
       
       <div class="row">
         <div class="leftcolumn">
           <div class="card">
-            <h2>TITLE HEADING</h2>
+            <h2></h2>
             <h5>Title description, Dec 7, 2017</h5>
-            <div class="fakeimg" style="height:200px;">Image</div>
-            <p>Some text..</p>
+            <div class="firstimg" style="height:250px;">
+                <img src="Home_Cover.jpg" class="firstimg">
+                
+            </div>
+            <p style="color: black;">Some text..</p>
           </div>
           <div class="card">
-            <h2>TITLE HEADING</h2>
+            <h2></h2>
             <h5>Title description, Sep 2, 2017</h5>
             <div class="fakeimg" style="height:200px;">Image</div>
             <p>Some text..</p>
@@ -117,7 +141,7 @@
         </div>
         <div class="rightcolumn">
           <div class="card">
-            <h2>About Me</h2>
+            <h2></h2>
             <div class="fakeimg" style="height:100px;">Image</div>
             <p style="color: black;">asdasd</p>
           </div>
@@ -128,14 +152,16 @@
             <div class="fakeimg">Image</div>
           </div>
           <div class="card">
-            <h3>Follow Me</h3>
-            <p>Some text..</p>
+            <h3>Email me</h3>
+            <p style="color: black;"">
+                <a href="mailto:rafox@ucsc.edu">HermioneGranger@hogwarts.edu</a>
+            </p>
           </div>
         </div>
       </div>
       
       <div class="footer">
-        <h2>Footer</h2>
+        <h2></h2>
       </div>
       
       
