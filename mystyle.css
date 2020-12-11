@@ -92,7 +92,7 @@
     }
     .ml1 {
         font-weight: 900;
-        font-size: 8.5em;
+        font-size: 8.5vw;
         text-align: center;
         padding-top: 80px;
       }
@@ -127,7 +127,7 @@
         color: #402d2d;
         padding: 150px 0;
         font-weight: 800;
-        font-size: 2em;
+        font-size: 2vw;
         text-transform: uppercase;
         letter-spacing: 0.5em;
         overflow: hidden;
