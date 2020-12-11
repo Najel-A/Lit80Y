@@ -92,7 +92,9 @@
     }
     .ml1 {
         font-weight: 900;
-        font-size: 3.5em;
+        font-size: 8.5em;
+        text-align: center;
+        padding-top: 80px;
       }
       
       .ml1 .letter {
@@ -123,12 +125,13 @@
 
       .ml16 {
         color: #402d2d;
-        padding: 40px 0;
+        padding: 150px 0;
         font-weight: 800;
         font-size: 2em;
         text-transform: uppercase;
         letter-spacing: 0.5em;
         overflow: hidden;
+        text-align: center;
       }
       
       .ml16 .letter {
