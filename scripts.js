@@ -1,39 +1,47 @@
-const words = ["Hermione Granger"];
-let i = 0;
-let timer;
+// Wrap every letter in a span
+var textWrapper = document.querySelector('.ml1 .letters');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 
-function typingEffect() {
-	let word = words[i].split("");
-	var loopTyping = function() {
-		if (word.length > 0) {
-			document.getElementById('word').innerHTML += word.shift();
-		} else {
-			deletingEffect();
-			return false;
-		};
-		timer = setTimeout(loopTyping, 200);
-	};
-	loopTyping();
-};
+anime.timeline({loop: true})
+  .add({
+    targets: '.ml1 .letter',
+    scale: [0.3,1],
+    opacity: [0,1],
+    translateZ: 0,
+    easing: "easeOutExpo",
+    duration: 600,
+    delay: (el, i) => 70 * (i+1)
+  }).add({
+    targets: '.ml1 .line',
+    scaleX: [0,1],
+    opacity: [0.5,1],
+    easing: "easeOutExpo",
+    duration: 700,
+    offset: '-=875',
+    delay: (el, i, l) => 80 * (l - i)
+  }).add({
+    targets: '.ml1',
+    opacity: 0,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 1000
+  });
 
-function deletingEffect() {
-	let word = words[i].split("");
-	var loopDeleting = function() {
-		if (word.length > 0) {
-			word.pop();
-			document.getElementById('word').innerHTML = word.join("");
-		} else {
-			if (words.length > (i + 1)) {
-				i++;
-			} else {
-				i = 0;
-			};
-			typingEffect();
-			return false;
-		};
-		timer = setTimeout(loopDeleting, 100);
-	};
-	loopDeleting();
-};
+  // Wrap every letter in a span
+var textWrapper = document.querySelector('.ml16');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 
-typingEffect();
+anime.timeline({loop: true})
+  .add({
+    targets: '.ml16 .letter',
+    translateY: [-100,0],
+    easing: "easeOutExpo",
+    duration: 1400,
+    delay: (el, i) => 30 * i
+  }).add({
+    targets: '.ml16',
+    opacity: 0,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 1000
+  });
